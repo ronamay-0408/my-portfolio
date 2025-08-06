@@ -28,6 +28,7 @@
 
     <!-- Lightbox2 JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
   <body>
     <div id="root"></div>
@@ -117,7 +118,7 @@
 	                <span class="number" data-number="8">0</span>
 	                <span>Project complete</span>
                 </p>
-                <p><a href="#" class="btn btn-primary py-3 px-3">Download CV</a></p>
+                <p><a href="/resume.pdf" class="btn btn-primary py-3 px-3">Download CV</a></p>
               </div>
 	          </div>
 	        </div>
@@ -409,20 +410,23 @@
 			<!-- Project Item -->
 			<div class="col-md-6 col-lg-4 mb-4">
 				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/Calcu.jpg); height: 300px;">
-				<div class="overlay"></div>
-				<div class="text text-center p-4">
-					<h3><a href="#">JAVA - Scientific Calculator</a></h3>
+					<div class="overlay"></div>
+					<div class="text text-center p-4">
+					<h3>
+						<a href="#" onclick="showUnavailableAlert(event)">JAVA - Scientific Calculator</a>
+					</h3>
 					<span>System</span>
-				</div>
+					</div>
 				</div>
 			</div>
+
 
 			<!-- Project Item -->
 			<div class="col-md-6 col-lg-8 mb-4">
 				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/EyeStore.jpg); height: 300px;">
 				<div class="overlay"></div>
 				<div class="text text-center p-4">
-					<h3><a href="#">HTML|CSS - Ecommerce</a></h3>
+					<h3><a href="#" onclick="showUnavailableAlert(event)">HTML|CSS - Ecommerce</a></h3>
 					<span>UI/UX Design</span>
 				</div>
 				</div>
@@ -466,7 +470,7 @@
 				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/votingSystem.jpg); height: 300px;">
 				<div class="overlay"></div>
 				<div class="text text-center p-4">
-					<h3><a href="#">NodeJS - Voting System</a></h3>
+					<h3><a href="https://github.com/ronamay-0408/voting-app-grp10">NodeJS - Voting System</a></h3>
 					<span>Web System</span>
 				</div>
 				</div>
@@ -477,8 +481,8 @@
 				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/busina.png); height: 300px;">
 				<div class="overlay"></div>
 				<div class="text text-center p-4">
-					<h3><a href="#">Laravel|HTML|CSS|PHP|JavaScript - BUsina</a></h3>
-					<span>Web System</span>
+					<h3><a href="https://businadirect.bicoluni-busina.com/">Laravel|HTML|CSS|PHP|JavaScript - BUsina</a></h3>
+					<span>Web System 2025</span>
 				</div>
 				</div>
 			</div>
@@ -488,8 +492,8 @@
 				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/iraya.PNG); height: 300px;">
 				<div class="overlay"></div>
 				<div class="text text-center p-4">
-					<h3><a href="#">NuxtJS|HTML|CSS|WordPress - Iraya Energies</a></h3>
-					<span>Web System</span>
+					<h3><a href="https://iraya-site.bicoluni-busina.com/">NuxtJS|HTML|CSS|WordPress - Iraya Energies</a></h3>
+					<span>Web System 2025</span>
 				</div>
 				</div>
 			</div>
@@ -711,4 +715,17 @@
   
   <script src="js/main.js"></script>
   </body>
+
+	<script>
+		function showUnavailableAlert(event) {
+			event.preventDefault();
+			Swal.fire({
+			icon: 'info',
+			title: 'Notice',
+			text: 'No available site or code at the moment.',
+			confirmButtonText: 'OK'
+			});
+		}
+	</script>
+
 </html>
