@@ -145,7 +145,7 @@ function Design() {
         ref={bannerRef}
         className="relative mt-10 overflow-hidden flex items-center justify-center text-center"
         style={{
-          backgroundImage: 'url(/contents/bg_1.jpg)',
+          backgroundImage: `url(${import.meta.env.BASE_URL}contents/bg_1.jpg)`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
