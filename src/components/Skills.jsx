@@ -1,21 +1,21 @@
 import { useState, useRef, useEffect } from "react";
 
 const skills = [
-  { name: "HTML5", percent: 90, color: "#E34F26", category: "Frontend", logo: "/logos/html.png" },
-  { name: "CSS", percent: 90, color: "#1572B6", category: "Frontend", logo: "/logos/text.png" },
-  { name: "JavaScript", percent: 85, color: "#F7DF1E", category: "Frontend", logo: "/logos/java-script.png" },
-  { name: "React", percent: 70, color: "#61DAFB", category: "Frontend", logo: "/logos/react.png" },
-  { name: "PHP", percent: 90, color: "#777BB4", category: "Backend", logo: "/logos/php.png" },
-  { name: "Laravel", percent: 90, color: "#FF2D20", category: "Backend", logo: "/logos/laravel.png" },
-  { name: "GitHub", percent: 85, color: "#f0f6fc", category: "Tools", logo: "/logos/github.png" },
-  { name: "Python", percent: 80, color: "#3776AB", category: "Backend", logo: "/logos/python.png" },
-  { name: "Node JS", percent: 50, color: "#339933", category: "Backend", logo: "/logos/nodejs.png" },
-  { name: "SQL", percent: 80, color: "#4479A1", category: "Database", logo: "/logos/sql-server.png" },
-  { name: "WordPress", percent: 70, color: "#21759B", category: "CMS", logo: "/logos/wordpress.png" },
-  { name: "ASP.NET MVC", percent: 50, color: "#512BD4", category: "Framework", logo: "/logos/web.png" },
-  { name: "Java", percent: 60, color: "#ED8B00", category: "Languages", logo: "/logos/java.png" },
-  { name: "C#", percent: 60, color: "#68217A", category: "Languages", logo: "/logos/c-sharp.png" },
-  { name: "C++", percent: 40, color: "#00599C", category: "Languages", logo: "/logos/c-.png" },
+  { name: "HTML5", percent: 90, color: "#E34F26", category: "Frontend", logo: "/my-portfolio/logos/html.png" },
+  { name: "CSS", percent: 90, color: "#1572B6", category: "Frontend", logo: "/my-portfolio/logos/text.png" },
+  { name: "JavaScript", percent: 85, color: "#F7DF1E", category: "Frontend", logo: "/my-portfolio/logos/java-script.png" },
+  { name: "React", percent: 70, color: "#61DAFB", category: "Frontend", logo: "/my-portfolio/logos/react.png" },
+  { name: "PHP", percent: 90, color: "#777BB4", category: "Backend", logo: "/my-portfolio/logos/php.png" },
+  { name: "Laravel", percent: 90, color: "#FF2D20", category: "Backend", logo: "/my-portfolio/logos/laravel.png" },
+  { name: "GitHub", percent: 85, color: "#f0f6fc", category: "Tools", logo: "/my-portfolio/logos/github.png" },
+  { name: "Python", percent: 80, color: "#3776AB", category: "Backend", logo: "/my-portfolio/logos/python.png" },
+  { name: "Node JS", percent: 50, color: "#339933", category: "Backend", logo: "/my-portfolio/logos/nodejs.png" },
+  { name: "SQL", percent: 80, color: "#4479A1", category: "Database", logo: "/my-portfolio/logos/sql-server.png" },
+  { name: "WordPress", percent: 70, color: "#21759B", category: "CMS", logo: "/my-portfolio/logos/wordpress.png" },
+  { name: "ASP.NET MVC", percent: 50, color: "#512BD4", category: "Framework", logo: "/my-portfolio/logos/web.png" },
+  { name: "Java", percent: 60, color: "#ED8B00", category: "Languages", logo: "/my-portfolio/logos/java.png" },
+  { name: "C#", percent: 60, color: "#68217A", category: "Languages", logo: "/my-portfolio/logos/c-sharp.png" },
+  { name: "C++", percent: 40, color: "#00599C", category: "Languages", logo: "/my-portfolio/logos/c-.png" },
 ];
 
 const RadialBar = ({ percent, color, size = 120, logo }) => {

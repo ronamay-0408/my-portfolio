@@ -172,7 +172,7 @@ function About() {
                 {/* Image */}
                 <div className="img-float relative z-1 rounded-2xl overflow-hidden" style={{ zIndex: 1 }}>
                   <img
-                    src="/contents/ronabg.png"
+                    src="/my-portfolio/contents/ronabg.png"
                     alt="Rona May Balangat"
                     style={{
                       width: '100%', height: '100%',
