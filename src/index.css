@@ -8,5 +8,8 @@
 * {
   font-family: 'Poppins', sans-serif;
 }
+body {
+  font-family: 'Poppins', sans-serif;
+}
 
 @variant dark (&:where(.dark, .dark *));

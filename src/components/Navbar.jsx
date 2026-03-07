@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react'
 
 function Navbar({ isDark, setIsDark }) {
   return (
-    <header className="sticky top-0 z-50 text-poppins relative flex flex-wrap sm:justify-start sm:flex-nowrap w-full py-6 bg-white dark:bg-gray-900 dark:border-gray-700">
-      <nav className="max-w-[70rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between">
+    <header className="sticky top-0 z-50 text-poppins relative flex flex-wrap sm:justify-start sm:flex-nowrap w-full py-4 px-2 bg-white dark:bg-gray-900 dark:border-gray-700">
+      <nav className="max-w-[70rem] w-full mx-auto sm:flex sm:items-center sm:justify-between">
         
         <div className="flex items-center justify-between">
           <a className="flex-none text-[25px] font-bold text-gray-900 dark:text-white focus:outline-none" href="#" aria-label="Brand">
@@ -31,14 +31,14 @@ function Navbar({ isDark, setIsDark }) {
         </div>
 
         <div id="hs-navbar-example" className="hidden hs-collapse overflow-hidden transition-all duration-300 basis-full grow sm:block" aria-labelledby="hs-navbar-example-collapse" role="region">
-          <div className="flex flex-col gap-10 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:ps-5">
-            <a className="text-lg font-medium text-gray-900 dark:text-white focus:outline-none hover:underline underline-offset-4" href="#" aria-current="page">Home</a>
-            <a className="text-lg text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white focus:outline-none hover:underline underline-offset-4" href="#">About</a>
-            <a className="text-lg text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white focus:outline-none hover:underline underline-offset-4" href="#">Resume</a>
-            <a className="text-lg text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white focus:outline-none hover:underline underline-offset-4" href="#">Services</a>
-            <a className="text-lg text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white focus:outline-none hover:underline underline-offset-4" href="#">Skills</a>
-            <a className="text-lg text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white focus:outline-none hover:underline underline-offset-4" href="#">Projects</a>
-            <a className="text-lg text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white focus:outline-none hover:underline underline-offset-4" href="#">Contact</a>
+          <div className="flex flex-col gap-8 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:ps-5">
+            <a className="text-md font-medium text-gray-900 dark:text-white focus:outline-none hover:underline underline-offset-4" href="#" aria-current="page">Home</a>
+            <a className="text-md text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white focus:outline-none hover:underline underline-offset-4" href="#">About</a>
+            <a className="text-md text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white focus:outline-none hover:underline underline-offset-4" href="#">Resume</a>
+            <a className="text-md text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white focus:outline-none hover:underline underline-offset-4" href="#">Services</a>
+            <a className="text-md text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white focus:outline-none hover:underline underline-offset-4" href="#">Skills</a>
+            <a className="text-md text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white focus:outline-none hover:underline underline-offset-4" href="#">Projects</a>
+            <a className="text-md text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white focus:outline-none hover:underline underline-offset-4" href="#">Contact</a>
 
             {/* Dark/Light Toggle */}
             <button

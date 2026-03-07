@@ -1,12 +1,12 @@
 function Home() {
   return (
-    <section className="relative min-h-screen flex pt-60 justify-center bg-white dark:bg-gray-900 dark:border-gray-700">
+    <section className="relative min-h-screen flex pt-60 justify-center bg-white dark:bg-gray-900 dark:border-gray-700 px-2">
 
       {/* Content */}
       <div className="relative z-10 text-center px-4">
         <span className="text-xl text-gray-500 dark:text-gray-400 tracking-[0.5em]">HELLO!</span>
         <h1 className="text-4xl md:text-7xl font-bold text-gray-900 dark:text-white mt-3 mb-4">
-          I'm <span className="text-blue-600 dark:text-blue-400">Rona May Balangat</span>
+          I'm <span className="text-blue-400">Rona May Balangat</span>
         </h1>
         <h2 className="text-xl md:text-3xl text-gray-600 dark:text-gray-300 mb-8 py-2">
           Web Developer / Full Stack Developer
@@ -16,13 +16,13 @@ function Home() {
             href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-4xl transition-colors"
+            className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-4xl transition-colors tracking-[0.1em]"
           >
             Hire me
           </a>
           <a
             href="#projects-section"
-            className="px-6 py-3 border border-gray-900 dark:border-white text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 rounded-4xl transition-colors"
+            className="tracking-[0.1em] px-6 py-3 border border-gray-900 dark:border-white text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 rounded-4xl transition-colors"
           >
             My works
           </a>
