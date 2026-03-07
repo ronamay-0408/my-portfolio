@@ -286,7 +286,7 @@ function Contact() {
               `}</style>
               <div style={{ position: 'relative', zIndex: 1, borderRadius: '18px', overflow: 'hidden' }}>
                 <img
-                  src="/contents/ronabg.png"
+                  src={`${import.meta.env.BASE_URL}contents/ronabg.png`}
                   alt="Rona May Balangat"
                   className="w-full h-full object-cover block"
                 />
