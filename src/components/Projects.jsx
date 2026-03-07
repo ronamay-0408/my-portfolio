@@ -411,7 +411,7 @@ function Projects() {
   const [activeProject, setActiveProject] = useState(null);
 
   return (
-    <section className="relative min-h-screen flex justify-center bg-white dark:bg-gray-900 dark:border-gray-700 pb-24 px-2">
+    <section id="projects" className="relative min-h-screen flex justify-center bg-white dark:bg-gray-900 dark:border-gray-700 pb-24 px-2">
       <style>{`
         @keyframes projectFadeIn {
           from { opacity: 0; transform: translateY(24px); }

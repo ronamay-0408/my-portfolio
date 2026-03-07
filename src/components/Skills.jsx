@@ -327,7 +327,7 @@ const TechStackCarousel = () => {
 
 function Skills() {
   return (
-    <section className="relative min-h-screen flex justify-center bg-white dark:bg-gray-900 dark:border-gray-700 pb-10 px-2">
+    <section id="skills" className="relative min-h-screen flex justify-center bg-white dark:bg-gray-900 dark:border-gray-700 pb-10 px-2">
       {/* Content */}
       <div className="max-w-[70rem] w-full items-stretch">
 
