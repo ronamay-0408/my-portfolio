@@ -8,7 +8,16 @@ const experiences = [
     type: 'Full-time',
     color: '#60a5fa',
     description: 'Responsible for developing and maintaining software applications that enhance the university\'s digital infrastructure. Collaborating with cross-functional teams to design, implement, and optimize solutions that improve user experience and operational efficiency. Committed to delivering high-quality code and continuously learning new technologies.',
-    tags: ['PHP', 'Laravel', 'JavaScript', 'MySQL'],
+    tags: ['PHP', 'Laravel', 'JavaScript', 'MySQL', 'Livewire', 'Tailwind', 'Preline'],
+  },
+  {
+    period: 'FEB 2025 — MAY 2025',
+    role: 'Full Stack Developer',
+    company: 'Iraya Energies Inc.',
+    type: 'Internship',
+    color: '#34d399',
+    description: 'Developed a dynamic demo page showcasing Iraya’s products and services using Laravel and WordPress, improving UI/UX, responsiveness, performance, and content manageability.',
+    tags: ['WordPress', 'ReactJS', 'NuxtJS'],
   },
   {
     period: '2024 — 2025',
@@ -17,7 +26,7 @@ const experiences = [
     type: 'Project',
     color: '#7c3aed',
     description: 'Worked on BUsina, a full-scale vehicle registration and security system developed for the entire Bicol University. Combining user management, system security, and data processing into a unified platform designed to streamline vehicle entry and exit while enhancing campus-wide safety and efficiency.',
-    tags: ['React', 'Node JS', 'MySQL', 'Full Stack'],
+    tags: ['PHP', 'HTML & CSS', 'MySQL', 'Bootstrap', 'Full Stack'],
   },
   {
     period: '2021 — 2025',

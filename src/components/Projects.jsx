@@ -104,64 +104,114 @@ const Modal = ({ project, onClose }) => {
         .thumb-scroll::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 2px; }
       `}</style>
 
-      <div className="projects-modal"
+            <div
+        className="projects-modal"
         onClick={e => e.stopPropagation()}
         style={{
-        //   background: '#1f2937 ',
           borderRadius: '20px',
           border: `1px solid ${project.color}44`,
           boxShadow: `0 0 60px ${project.color}22`,
-          width: '100%', maxWidth: '900px',
-          maxHeight: '90vh',
+          width: '95vw',
+          maxWidth: '900px',
+          maxHeight: '92vh',
           overflow: 'hidden',
-          display: 'flex', flexDirection: 'column',
+          display: 'flex',
+          flexDirection: 'column',
           animation: 'modalSlideUp 0.3s ease',
         }}
       >
-        {/* Modal Header */}
+        <style>{`
+          .thumb-scroll::-webkit-scrollbar { height: 4px; }
+          .thumb-scroll::-webkit-scrollbar-track { background: transparent; }
+          .thumb-scroll::-webkit-scrollbar-thumb { background: ${project.color}44; border-radius: 2px; }
+          @keyframes modalFadeIn {
+            from { opacity: 0; transform: scale(0.97); }
+            to   { opacity: 1; transform: scale(1); }
+          }
+          @keyframes modalSlideUp {
+            from { opacity: 0; transform: translateY(24px); }
+            to   { opacity: 1; transform: translateY(0); }
+          }
+          .nav-btn {
+            position: absolute;
+            background: rgba(0,0,0,0.6);
+            border-radius: 50%;
+            color: #fff;
+            cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s;
+            flex-shrink: 0;
+          }
+          .nav-btn:hover { background: ${project.color}44 !important; }
+        `}</style>
+
+        {/* ── Header ── */}
         <div style={{
-          padding: '20px 28px',
+          padding: 'clamp(12px, 2vw, 20px) clamp(14px, 2.5vw, 28px)',
           borderBottom: `1px solid ${project.color}22`,
           display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-          flexShrink: 0,
+          gap: '8px', flexShrink: 0,
         }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', minWidth: 0, flex: 1 }}>
+            {/* Colored dot */}
             <div style={{
-              width: '10px', height: '10px', borderRadius: '50%',
-              background: project.color, boxShadow: `0 0 10px ${project.color}`,
+              width: 'clamp(7px, 1vw, 10px)',
+              height: 'clamp(7px, 1vw, 10px)',
+              borderRadius: '50%', flexShrink: 0,
+              background: project.color,
+              boxShadow: `0 0 8px ${project.color}`,
             }} />
+
+            {/* Title */}
             <span style={{
-              color: '#fff', fontFamily: "'Courier New', monospace",
-              fontWeight: 700, fontSize: '16px', letterSpacing: '0.1em',
+              color: '#fff',
+              fontFamily: "'Courier New', monospace",
+              fontWeight: 700,
+              fontSize: 'clamp(11px, 2vw, 16px)',
+              letterSpacing: '0.08em',
+              whiteSpace: 'nowrap',
+              overflow: 'hidden',
+              textOverflow: 'ellipsis',
             }}>{project.title}</span>
+
+            {/* Category badge — hidden on very small */}
             <span style={{
               background: `${project.color}22`, color: project.color,
-              fontSize: '10px', fontFamily: "'Courier New', monospace",
+              fontSize: 'clamp(9px, 1vw, 11px)',
+              fontFamily: "'Courier New', monospace",
               padding: '3px 10px', borderRadius: '20px',
               border: `1px solid ${project.color}44`,
-              letterSpacing: '0.1em', textTransform: 'uppercase',
+              letterSpacing: '0.08em', textTransform: 'uppercase',
+              whiteSpace: 'nowrap', flexShrink: 0,
             }}>{project.category}</span>
           </div>
+
+          {/* Close button */}
           <button
             onClick={onClose}
             style={{
-              background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.15)',
-              borderRadius: '50%', width: '36px', height: '36px',
-              color: '#fff', cursor: 'pointer', fontSize: '16px',
+              background: 'rgba(255,255,255,0.05)',
+              border: '1px solid rgba(255,255,255,0.15)',
+              borderRadius: '50%',
+              width: 'clamp(28px, 3.5vw, 36px)',
+              height: 'clamp(28px, 3.5vw, 36px)',
+              color: '#fff', cursor: 'pointer',
+              fontSize: 'clamp(10px, 1.5vw, 15px)',
               display: 'flex', alignItems: 'center', justifyContent: 'center',
-              transition: 'all 0.2s',
+              transition: 'all 0.2s', flexShrink: 0,
             }}
-            onMouseEnter={e => e.currentTarget.style.background = 'rgba(255,255,255,0.12)'}
+            onMouseEnter={e => e.currentTarget.style.background = 'rgba(255,255,255,0.15)'}
             onMouseLeave={e => e.currentTarget.style.background = 'rgba(255,255,255,0.05)'}
           >✕</button>
         </div>
 
-        {/* Main image viewer */}
+        {/* ── Main image viewer ── */}
         <div style={{
-          position: 'relative', flexShrink: 0,
+          position: 'relative',
           background: '#080812',
           display: 'flex', alignItems: 'center', justifyContent: 'center',
-          height: '420px', overflow: 'hidden',
+          height: 'clamp(180px, 42vh, 420px)',
+          overflow: 'hidden', flexShrink: 0,
         }}>
           <img
             key={current}
@@ -171,41 +221,38 @@ const Modal = ({ project, onClose }) => {
               maxWidth: '100%', maxHeight: '100%',
               objectFit: 'contain',
               animation: 'modalFadeIn 0.2s ease',
+              padding: '8px',
             }}
           />
 
           {project.screenshots.length > 1 && (
             <>
-              <button onClick={prev} style={{
-                position: 'absolute', left: '16px',
-                background: 'rgba(0,0,0,0.6)', border: `1px solid ${project.color}44`,
-                borderRadius: '50%', width: '44px', height: '44px',
-                color: '#fff', cursor: 'pointer', fontSize: '18px',
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                transition: 'all 0.2s',
-              }}
-                onMouseEnter={e => e.currentTarget.style.background = `${project.color}33`}
-                onMouseLeave={e => e.currentTarget.style.background = 'rgba(0,0,0,0.6)'}
-              >←</button>
-              <button onClick={next} style={{
-                position: 'absolute', right: '16px',
-                background: 'rgba(0,0,0,0.6)', border: `1px solid ${project.color}44`,
-                borderRadius: '50%', width: '44px', height: '44px',
-                color: '#fff', cursor: 'pointer', fontSize: '18px',
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                transition: 'all 0.2s',
-              }}
-                onMouseEnter={e => e.currentTarget.style.background = `${project.color}33`}
-                onMouseLeave={e => e.currentTarget.style.background = 'rgba(0,0,0,0.6)'}
-              >→</button>
+              <button onClick={prev} className="nav-btn" style={{
+                left: 'clamp(8px, 1.5vw, 16px)',
+                width: 'clamp(30px, 4vw, 44px)',
+                height: 'clamp(30px, 4vw, 44px)',
+                fontSize: 'clamp(13px, 1.5vw, 18px)',
+                border: `1px solid ${project.color}44`,
+              }}>←</button>
+
+              <button onClick={next} className="nav-btn" style={{
+                right: 'clamp(8px, 1.5vw, 16px)',
+                width: 'clamp(30px, 4vw, 44px)',
+                height: 'clamp(30px, 4vw, 44px)',
+                fontSize: 'clamp(13px, 1.5vw, 18px)',
+                border: `1px solid ${project.color}44`,
+              }}>→</button>
 
               {/* Counter */}
               <div style={{
-                position: 'absolute', bottom: '12px', left: '50%', transform: 'translateX(-50%)',
-                background: 'rgba(0,0,0,0.7)', borderRadius: '20px',
-                padding: '4px 14px', color: '#fff',
-                fontFamily: "'Courier New', monospace", fontSize: '11px',
+                position: 'absolute', bottom: '10px', left: '50%',
+                transform: 'translateX(-50%)',
+                background: 'rgba(0,0,0,0.75)',
+                borderRadius: '20px', padding: '3px 12px',
+                color: '#fff', fontFamily: "'Courier New', monospace",
+                fontSize: 'clamp(9px, 1.2vw, 11px)',
                 border: `1px solid ${project.color}33`,
+                whiteSpace: 'nowrap',
               }}>
                 {current + 1} / {project.screenshots.length}
               </div>
@@ -213,13 +260,13 @@ const Modal = ({ project, onClose }) => {
           )}
         </div>
 
-        {/* Thumbnails */}
+        {/* ── Thumbnails ── */}
         {project.screenshots.length > 1 && (
           <div className="thumb-scroll" style={{
-            display: 'flex', gap: '8px', padding: '12px 20px',
+            display: 'flex', gap: '6px',
+            padding: 'clamp(8px, 1.5vw, 12px) clamp(12px, 2vw, 20px)',
             overflowX: 'auto', flexShrink: 0,
             borderTop: `1px solid ${project.color}22`,
-            // background: '#1f2937',
           }}>
             {project.screenshots.map((src, i) => (
               <img
@@ -227,10 +274,12 @@ const Modal = ({ project, onClose }) => {
                 src={src}
                 onClick={() => setCurrent(i)}
                 style={{
-                  width: '72px', height: '48px', objectFit: 'cover',
-                  borderRadius: '6px', cursor: 'pointer', flexShrink: 0,
+                  width: 'clamp(52px, 7vw, 72px)',
+                  height: 'clamp(36px, 5vw, 48px)',
+                  objectFit: 'cover', borderRadius: '6px',
+                  cursor: 'pointer', flexShrink: 0,
                   border: `2px solid ${i === current ? project.color : 'transparent'}`,
-                  opacity: i === current ? 1 : 0.5,
+                  opacity: i === current ? 1 : 0.45,
                   transition: 'all 0.2s',
                 }}
               />
@@ -238,25 +287,27 @@ const Modal = ({ project, onClose }) => {
           </div>
         )}
 
-        {/* Footer info */}
+        {/* ── Footer ── */}
         <div style={{
-          padding: '16px 28px',
+          padding: 'clamp(12px, 2vw, 16px) clamp(14px, 2.5vw, 28px)',
           borderTop: `1px solid ${project.color}22`,
-          display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-          flexWrap: 'wrap', gap: '10px',
-          flexShrink: 0,
+          display: 'flex', flexDirection: 'column', gap: '10px',
+          flexShrink: 0, overflowY: 'auto',
         }}>
           <p style={{
-            color: '#94a3b8', fontSize: '13px',
-            fontFamily: "'Courier New', monospace", margin: 0,
-            maxWidth: '520px', lineHeight: 1.6,
+            color: '#94a3b8',
+            fontSize: 'clamp(11px, 1.5vw, 13px)',
+            fontFamily: "'Courier New', monospace",
+            margin: 0, lineHeight: 1.65,
           }}>{project.description}</p>
+
           <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
             {project.tech.map(t => (
               <span key={t} style={{
-                background: 'rgba(255,255,255,0.05)',
-                border: '1px solid rgba(255,255,255,0.1)',
-                color: '#cbd5e1', fontSize: '10px',
+                background: `${project.color}12`,
+                border: `1px solid ${project.color}33`,
+                color: project.color,
+                fontSize: 'clamp(9px, 1vw, 11px)',
                 fontFamily: "'Courier New', monospace",
                 padding: '3px 10px', borderRadius: '20px',
                 letterSpacing: '0.05em',
@@ -265,6 +316,7 @@ const Modal = ({ project, onClose }) => {
           </div>
         </div>
       </div>
+
     </div>
   );
 };
@@ -433,9 +485,8 @@ function Projects() {
         }
 
         @media (max-width: 640px) {
-  .projects-modal { margin: 10px !important; }
-  .projects-modal img { height: 220px !important; }
-}
+          .projects-modal { margin: 10px !important; }
+        }
       `}</style>
 
       <div className="max-w-[70rem] w-full items-stretch">

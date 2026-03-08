@@ -11,7 +11,7 @@ const info = [
 const stats = [
   { number: 7,   label: 'Projects\nCompleted' },
   { number: 2,   label: 'Happy\nClients' },
-  { number: 3,   label: 'Years\nLearning' },
+  { number: 5,   label: 'Years\nLearning' },
   { number: 100, label: 'Cups of\nCoffee' },
 ]
 
