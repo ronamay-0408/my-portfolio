@@ -37,7 +37,7 @@ const projects = [
     id: 'busina',
     title: 'BUsina',
     description: 'Vehicle Registration & Violation Management for Bicol University, Developed a web application for managing vehicle registrations and tracking violations.',
-    tech: ['React', 'Node JS', 'MySQL'],
+    tech: ['HTML & CSS', 'PHP', 'MySQL', 'Laravel', 'Bootstrap'],
     cover: `${base}projects/busina/1.png`,
     screenshots: Array.from({ length: 9 }, (_, i) => `${base}projects/busina/${i + 1}.png`),
     category: 'Web System & Mobile App',
