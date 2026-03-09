@@ -8,7 +8,7 @@ const skills = [
   { name: "JavaScript", percent: 85, color: "#F7DF1E", category: "Frontend", logo: `${base}logos/java-script.png` },
   { name: "React", percent: 70, color: "#61DAFB", category: "Frontend", logo: `${base}logos/react.png` },
   { name: "PHP", percent: 90, color: "#777BB4", category: "Backend", logo: `${base}logos/php.png` },
-  { name: "Laravel", percent: 90, color: "#FF2D20", category: "Backend", logo: `${base}logos/laravel.png` },
+  { name: "Laravel", percent: 90, color: "#FF2D20", category: "Framework", logo: `${base}logos/laravel.png` },
   { name: "GitHub", percent: 85, color: "#f0f6fc", category: "Tools", logo: `${base}logos/github.png` },
   { name: "Python", percent: 80, color: "#3776AB", category: "Backend", logo: `${base}logos/python.png` },
   { name: "Node JS", percent: 50, color: "#339933", category: "Backend", logo: `${base}logos/nodejs.png` },

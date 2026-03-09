@@ -40,7 +40,7 @@ const projects = [
     tech: ['HTML & CSS', 'PHP', 'MySQL', 'Laravel', 'Bootstrap'],
     cover: `${base}projects/busina/1.png`,
     screenshots: Array.from({ length: 9 }, (_, i) => `${base}projects/busina/${i + 1}.png`),
-    category: 'Web System & Mobile App',
+    category: 'Web System & Web App',
     color: '#339933',
   },
   {
