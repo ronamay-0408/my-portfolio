@@ -277,7 +277,7 @@ function Resume() {
             className="flex justify-center mt-4"
           >
             <a
-              href="/resume.pdf"
+              href="/my-portfolio/resume.pdf"
               download="Rona_May_Balangat_CV.pdf"
               target="_blank"
               rel="noopener noreferrer"

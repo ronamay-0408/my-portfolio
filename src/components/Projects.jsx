@@ -55,8 +55,8 @@ const projects = [
   },
   {
     id: 'coe',
-    title: 'Center of Excellence Self-Assessment tool',
-    description: 'A web-based tool for managing and evaluating requirements for Center of Excellence accreditation.',
+    title: 'Self-Assessment Tool System',
+    description: 'A web-based tool for managing and evaluating requirements for school accreditation.',
     tech: ['PHP', 'JavaScript', 'MySQL', 'Laravel', 'Tailwind', 'Preline'],
     cover: `${base}projects/coe/1.png`,
     screenshots: Array.from({ length: 8 }, (_, i) => `${base}projects/coe/${i + 1}.png`),
