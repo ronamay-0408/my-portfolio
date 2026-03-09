@@ -228,9 +228,8 @@ function Home() {
         {/* CTAs */}
         <div className="fade-up-6 flex flex-wrap gap-4 justify-center">
           <a
-            href="/resume.pdf"
+            href="/my-portfolio/resume.pdf"
             download="Rona_May_Balangat_CV.pdf"
-            target="_blank"
             rel="noopener noreferrer"
             className="btn-primary relative z-0 inline-flex items-center gap-2 px-8 py-3 rounded-full text-white font-semibold tracking-wide"
             style={{ background: 'linear-gradient(135deg, #3b82f6, #60a5fa)' }}
