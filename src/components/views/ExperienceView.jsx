@@ -8,7 +8,7 @@ function ExperienceView() {
           <span className="eyebrow">Experience &amp; education</span>
           <h2 className="display">The road so far</h2>
           <p className="lede">
-            From a BSIT degree and a university-wide capstone to shipping production systems at Bicol University&rsquo;s ICT Office.
+            From a BSIT degree and a university-wide capstone to building the website and GEO dashboard at Poliris.
           </p>
         </div>
         <a

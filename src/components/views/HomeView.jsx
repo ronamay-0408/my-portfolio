@@ -111,8 +111,8 @@ function HomeView({ go }) {
         >
           <div className="stat-strip">
             <div>
-              <b>{experience[0].period.split(' ')[0]}</b>
-              <small>Started at BU ICTO</small>
+              <b>{experience[0].period.match(/\d{4}/)?.[0]}</b>
+              <small>Started at {experience[0].org}</small>
             </div>
             <div>
               <b>{experience.length}</b>

@@ -14,7 +14,7 @@ export const profile = {
   linkedin: 'https://www.linkedin.com/in/rona-may-balangat-50037b289',
   headline: ['Build it clean.', 'Ship it simple.'],
   tagline:
-    'IT graduate and junior programmer at Bicol University. I build web systems that pull scattered information into one place and make the process feel effortless for the people using it.',
+    'IT graduate and Software Engineer at Poliris. I build web systems that pull scattered information into one place and make the process feel effortless for the people using it.',
 }
 
 export const socials = [
@@ -34,12 +34,15 @@ export const nav = [
 ]
 
 export const dailyDrivers = [
-  { name: 'Laravel',   logo: `${base}logos/laravel.png` },
-  { name: 'PHP',       logo: `${base}logos/php.png` },
-  { name: 'React',     logo: `${base}logos/react.png` },
-  { name: 'JavaScript',logo: `${base}logos/java-script.png` },
-  { name: 'MySQL',     logo: `${base}logos/sql-server.png` },
-  { name: 'GitHub',    logo: `${base}logos/github.png` },
+  { name: 'Laravel',    logo: `${base}logos/laravel.png` },
+  { name: 'PHP',        logo: `${base}logos/php.png` },
+  { name: 'React',      logo: `${base}logos/react.png` },
+  { name: 'JavaScript', logo: `${base}logos/java-script.png` },
+  { name: 'TypeScript', logo: `${base}logos/typescript.svg` },
+  { name: 'Python',     logo: `${base}logos/python.png` },
+  { name: 'C#',         logo: `${base}logos/c-sharp.png` },
+  { name: 'MySQL',      logo: `${base}logos/sql-server.png` },
+  { name: 'GitHub',     logo: `${base}logos/github.png` },
 ]
 
 export const projects = [
@@ -118,9 +121,11 @@ export const skills = [
   { name: 'HTML5',       percent: 90, category: 'Frontend',  logo: `${base}logos/html.png` },
   { name: 'CSS',         percent: 90, category: 'Frontend',  logo: `${base}logos/text.png` },
   { name: 'JavaScript',  percent: 85, category: 'Frontend',  logo: `${base}logos/java-script.png` },
+  { name: 'TypeScript',  percent: 75, category: 'Frontend',  logo: `${base}logos/typescript.svg` },
   { name: 'React',       percent: 70, category: 'Frontend',  logo: `${base}logos/react.png` },
   { name: 'PHP',         percent: 90, category: 'Backend',   logo: `${base}logos/php.png` },
   { name: 'Laravel',     percent: 90, category: 'Framework', logo: `${base}logos/laravel.png` },
+  { name: 'Supabase',    percent: 70, category: 'Backend',   logo: `${base}logos/supabase.svg` },
   { name: 'GitHub',      percent: 85, category: 'Tools',     logo: `${base}logos/github.png` },
   { name: 'Python',      percent: 80, category: 'Backend',   logo: `${base}logos/python.png` },
   { name: 'SQL',         percent: 80, category: 'Database',  logo: `${base}logos/sql-server.png` },
@@ -134,12 +139,21 @@ export const skills = [
 
 export const experience = [
   {
-    period: '2025 to Present',
+    period: 'March 2026 to Present',
+    role: 'Software Engineer',
+    org: 'Poliris',
+    type: 'Full-time',
+    description:
+      'Responsible for the Poliris website and the GEO dashboard inside the Poliris application, building features end to end and keeping both interfaces fast, reliable and easy to use.',
+    tags: ['TypeScript', 'React', 'Supabase', 'Python'],
+  },
+  {
+    period: 'Oct 2025 to June 2026',
     role: 'Junior Programmer',
     org: 'Bicol University, ICTO',
     type: 'Full-time',
     description:
-      'Developing and maintaining the software that runs on the university’s digital infrastructure. Working with cross-functional teams to design, build and optimise systems that improve user experience and day-to-day operations.',
+      'Developed and maintained the software that runs on the university’s digital infrastructure. Worked with cross-functional teams to design, build and optimise systems that improve user experience and day-to-day operations.',
     tags: ['PHP', 'Laravel', 'Livewire', 'MySQL', 'Tailwind', 'Preline'],
   },
   {
@@ -217,7 +231,7 @@ export const personal = [
   { label: 'Location', value: 'Sto. Domingo, Albay' },
   { label: 'Email',    value: profile.email },
   { label: 'Phone',    value: profile.phone },
-  { label: 'Role',     value: 'Junior Programmer, BU ICTO' },
+  { label: 'Role',     value: 'Software Engineer, Poliris' },
 ]
 
 export const reach = [
@@ -229,5 +243,5 @@ export const reach = [
 
 export const bio = [
   'I’m an Information Technology graduate with a strong passion for technology and problem-solving. I enjoy creating websites that centralise information and make processes easy and simple for the people using them.',
-  'Right now I work as a junior programmer at Bicol University’s ICT Office, where most of my days are spent in Laravel, Livewire and MySQL. Outside of code I cook, experiment with new recipes, and build custom furniture, always blending creativity with function.',
+  'Right now I work as a Software Engineer at Poliris, where most of my days are spent building the company website and the GEO dashboard with TypeScript, React and Supabase. Outside of code I cook, experiment with new recipes, and build custom furniture, always blending creativity with function.',
 ]
